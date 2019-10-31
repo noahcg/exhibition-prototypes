@@ -3,7 +3,7 @@
     <b-button class="open-button" @click="openFlyout" ref="openButton">
       <img v-bind:src="buttonImage" alt />
     </b-button>
-    <div class="flyout-panel" ref="flyoutPanel" :class="{opened: isOpen}">
+    <div :class="['flyout-panel', {opened: isOpen}]" ref="flyoutPanel">
       <b-container>
         <b-row>
           <b-col md="10" offset-md="1" class="text-right">
@@ -41,6 +41,7 @@ export default {
   },
   methods: {
     openFlyout: function() {
+      this.isOpen = true;
       this.focusedElementBeforeFlyout = document.activeElement;
 
       this.flyoutPanel = this.$refs["flyoutPanel"];
@@ -57,8 +58,6 @@ export default {
 
       this.firstTabStop = focusableElements[0];
       this.lastTabStop = focusableElements[focusableElements.length - 1];
-
-      this.isOpen = true;
 
       this.firstTabStop.focus();
     },
