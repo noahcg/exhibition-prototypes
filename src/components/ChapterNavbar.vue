@@ -5,10 +5,7 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">I. There Was A Time</b-nav-item>
-          <b-nav-item href="#">II. Slow Descent</b-nav-item>
-          <b-nav-item href="#">III. Let Us Start</b-nav-item>
-          <b-nav-item href="#">IV. Exhiled to Nowhere</b-nav-item>
+          <b-nav-item href="#" v-for="item in menuItems" :key="item.id">{{ item }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -17,7 +14,22 @@
 
 <script>
 export default {
-  name: "chapternavbar"
+  name: "chapternavbar",
+  data() {
+    return {
+      menuItems: {}
+    };
+  },
+  created() {
+    this.getNavItems().then(data => (this.menuItems = data.chapters.menuitem));
+  },
+  methods: {
+    async getNavItems() {
+      let response = await fetch(`/data/chapters.json`);
+      let data = await response.json();
+      return data;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
