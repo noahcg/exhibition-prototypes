@@ -11,10 +11,10 @@
 }
 .able-white-controls button {
   color: #bd9828 !important;
-  outline: 2px solid #e8e8e8;
+  outline: 2px solid #000;
 }
 .able-status-bar {
-  color: black;
+  color: #fff;
 }
 .able-speed {
   display: inline !important;
@@ -25,6 +25,9 @@
 .able-seekbar-loaded {
   height: 0.2em;
   background-color: darken(#bd9828, 10%);
+}
+.able-seekbar-played {
+  height: 0.2em;
 }
 .able-transcript-area {
   background: none;
@@ -41,4 +44,20 @@
 }
 .able-white-controls {
   color: $on-gray-bg !important;
+}
+.able-window-toolbar {
+  display: none;
+}
+// .able-window-toolbar label {
+//   color: #fff;
+// }
+#transcripts {
+  color: #fff;
+}
+.able-highlight,
+.able-transcript span:hover {
+  color: #000;
+}
+.able-transcript {
+  padding: 0;
 }
