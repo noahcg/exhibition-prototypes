@@ -1,0 +1,16 @@
+{
+  "audio": {
+    "muhammed": {
+      "source": "https://encyclopedia.ushmm.org/asset/7a639b01-b5dc-4506-bd9c-b56ad6fba978.mp3",
+      "transcript": "../media/lyrics.vtt"
+    }
+  },
+  "chapters": {
+    "menuitem": [
+      "I. There Was A Time",
+      "II. Slow Descent",
+      "III. Let Us Start",
+      "IV. Exhiled to Nowhere"
+    ]
+  }
+}
