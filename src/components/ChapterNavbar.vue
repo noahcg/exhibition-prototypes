@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     async getNavItems() {
-      let response = await fetch(`/data/chapters.json`);
+      let response = await fetch(`/data/data.json`);
       let data = await response.json();
       return data;
     }
