@@ -2,12 +2,9 @@
   <section>
     <b-navbar class="chapters" toggleable="lg" type="dark" variant="info">
       <b-navbar-brand>Chapters</b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item href="#" v-for="item in menuItems" :key="item.id">{{ item }}</b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
+      <b-navbar-nav>
+        <b-nav-item :href="item.url" v-for="item in menuItems" :key="item.id">{{ item.text }}</b-nav-item>
+      </b-navbar-nav>
     </b-navbar>
   </section>
 </template>
@@ -20,8 +17,14 @@ export default {
       menuItems: {}
     };
   },
-  created() {
-    this.getNavItems().then(data => (this.menuItems = data.chapters.menuitem));
+  mounted() {
+    this.getNavItems().then(data => {
+      if (window.innerWidth > 992) {
+        this.menuItems = data.chapters.menuitem.desktop;
+      } else {
+        this.menuItems = data.chapters.menuitem.mobile;
+      }
+    });
   },
   methods: {
     async getNavItems() {
@@ -35,31 +38,34 @@ export default {
 <style lang="scss" scoped>
 .chapters {
   background: #111 !important;
+  justify-content: inherit;
+  padding: 0 5px;
 }
 .navbar-brand {
   display: inline-block;
+  margin-right: 5px;
 }
 .navbar-nav {
   margin: 0;
   padding: 0;
   overflow: hidden;
   list-style: none;
-  display: block;
-  width: 100%;
+  flex-direction: row;
   text-align: center;
   background-color: #111;
-}
-.nav-item {
-  display: block;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 .navbar-dark .navbar-nav .nav-link {
-  display: block;
-  padding: 1em;
+  padding: 10px 0;
   color: #fff;
   font-weight: bold;
   font-size: 1.15rem;
   text-decoration: none;
   text-transform: uppercase;
+  min-width: 48px;
+  min-height: 48px;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #bc9728;
