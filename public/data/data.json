@@ -6,11 +6,19 @@
     }
   },
   "chapters": {
-    "menuitem": [
-      "I. There Was A Time",
-      "II. Slow Descent",
-      "III. Let Us Start",
-      "IV. Exhiled to Nowhere"
-    ]
+    "menuitem": {
+      "desktop":[
+        {"text": "I. There Was A Time","url": "https://www.ushmm.org"},
+        {"text": "II. Slow Descent","url": "https://www.ushmm.org"},
+        {"text": "III. Let Us Start","url": "https://www.ushmm.org"},
+        {"text": "IV. Exhiled to Nowhere","url": "https://www.ushmm.org"}
+      ],
+      "mobile":[
+        {"text": "I.","url": "https://www.ushmm.org"},
+        {"text": "II.","url": "https://www.ushmm.org"},
+        {"text": "III.","url": "https://www.ushmm.org"},
+        {"text": "IV.","url": "https://www.ushmm.org"}
+      ]
+    } 
   }
 }
