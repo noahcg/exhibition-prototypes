@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: "/",
+  publicPath: "/rohingya/personal-story",
   css: {
     loaderOptions: {
       scss: {
