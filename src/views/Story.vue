@@ -10,7 +10,7 @@
             <b-row>
               <b-col md="10" offset-md="1" xl="8" offset-xl="2">
                 <figure class="story-featured-image">
-                  <div class="mobile-screen"></div>
+                  <!-- <div class="mobile-screen"></div> -->
                   <img src="images/Jomila.jpg" alt="Portrait of Jomila, the Mother/Wife" />
                 </figure>
                 <div class="intro-text">
@@ -194,13 +194,22 @@ body {
   }
 
   img {
-    margin-left: -25%;
     width: 100vh;
   }
 }
 .intro-text {
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.7) 50%
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-repeat: no-repeat;
+  background-size: 100% 100px, 100% 100%;
+  background-position: 0 0, 0 100px;
   color: #fff;
-  padding: 40px 0 0;
+  margin: 360px -15px 0;
+  padding: 90px 15px 50px;
   position: relative;
   text-align: left;
 }
@@ -229,15 +238,20 @@ body {
 .subtitle {
   font-size: 0.8rem;
   line-height: 1;
+  margin: 0;
 }
 
 .intro-snippet {
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: left;
   font-size: 1.2rem;
+  margin: 0 -15px;
+  padding: 0 15px 20px;
   position: relative;
 }
 .content {
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   position: relative;
   text-align: left;
@@ -304,8 +318,10 @@ body {
     }
   }
   .intro-text {
+    background: none;
     float: left;
     margin: 20px 0 0 -25px;
+    padding: 40px 0;
     width: 40%;
   }
   .intro-snippet {
