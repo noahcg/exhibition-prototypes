@@ -1,58 +1,61 @@
 <template>
   <div>
-    <section class="panel home-panel">
+    <section>
+      <figure class="intro-background">
+        <img src="images/hero-bg.jpg" alt="A Rohingya Village" />
+      </figure>
       <b-container>
-        <b-row>
-          <b-col class="column-left">
-            <a href="#">Link 1</a>
-            <img src="https://picsum.photos/id/278/500/500" alt />
-          </b-col>
-          <b-col class="column-right">
-            <a href="#">Link 2</a>
+        <b-row class="intro">
+          <b-col cols="12" xl="8" offset-xl="2">
+            <h1>Stories</h1>
             <p
               class="text-left"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem nisi alias enim consequuntur. Debitis consequuntur minus fugiat nam provident assumenda ipsum eligendi quam! Odio nesciunt, iste quas reprehenderit fugit rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis odio molestiae beatae, atque provident maiores quam ad, non libero est dicta iusto incidunt maxime, numquam exercitationem quae ab dolore.</p>
-            <p
-              class="text-left"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem nisi alias enim consequuntur. Debitis consequuntur minus fugiat nam provident assumenda ipsum eligendi quam! Odio nesciunt, iste quas reprehenderit fugit rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis corporis odio molestiae beatae, atque provident maiores quam ad, non libero est dicta iusto incidunt maxime, numquam exercitationem quae ab dolore.</p>
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis in minima a reiciendis consectetur provident aut quis voluptates, tenetur porro quidem aperiam libero commodi pariatur laboriosam illo nihil quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis in minima a reiciendis consectetur provident aut quis voluptates, tenetur porro quidem aperiam libero commodi pariatur laboriosam illo nihil quo!</p>
           </b-col>
         </b-row>
-      </b-container>
-      <flyout button-image="https://picsum.photos/id/386/100/100">
-        <template v-slot:heading>
-          <p class="title text-left">{{ flyout.title }}</p>
-          <p class="sub-title text-left">{{ flyout.subtitle }}</p>
-        </template>
-        <template v-slot:media>
-          <audio-player
-            source="https://encyclopedia.ushmm.org/asset/7a639b01-b5dc-4506-bd9c-b56ad6fba978.mp3"
-            captions="/media/lyrics.vtt"
-          />
-        </template>
-      </flyout>
-    </section>
-    <section>
-      <b-container>
-        <b-row>
-          <h2>second</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <a href="#">Link 3</a>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-        </b-row>
-      </b-container>
-    </section>
-    <section>
-      <b-container>
-        <b-row>
-          <h2>third</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa error, impedit accusamus, velit similique perferendis saepe architecto cupiditate voluptates eum enim eaque cum magnam veritatis illum molestias nostrum quasi.</p>
+        <b-row class="citizens">
+          <b-col xl="10" offset-xl="1">
+            <b-row>
+              <b-col class="citizen" cols="12" md="6" xl="4">
+                <router-link to="/story">
+                  <div class="citizen-elements">
+                    <img src="images/Jomila.jpg" alt="Portait of Jomila - a Rohingya citizen" />
+                    <p>Title Goes Here</p>
+                  </div>
+                </router-link>
+              </b-col>
+              <b-col class="citizen" cols="12" md="6" xl="4">
+                <div class="citizen-elements">
+                  <img src="images/Jomila.jpg" alt="Portait of Jomila - a Rohingya citizen" />
+                  <p>Title Goes Here</p>
+                </div>
+              </b-col>
+              <b-col class="citizen" cols="12" md="6" xl="4">
+                <div class="citizen-elements">
+                  <img src="images/Jomila.jpg" alt="Portait of Jomila - a Rohingya citizen" />
+                  <p>Title Goes Here</p>
+                </div>
+              </b-col>
+              <b-col class="citizen" cols="12" md="6" xl="4">
+                <div class="citizen-elements">
+                  <img src="images/Jomila.jpg" alt="Portait of Jomila - a Rohingya citizen" />
+                  <p>Title Goes Here</p>
+                </div>
+              </b-col>
+              <b-col class="citizen" cols="12" md="6" xl="4">
+                <div class="citizen-elements">
+                  <img src="images/Jomila.jpg" alt="Portait of Jomila - a Rohingya citizen" />
+                  <p>Title Goes Here</p>
+                </div>
+              </b-col>
+              <b-col class="citizen" cols="12" md="6" xl="4">
+                <div class="citizen-elements">
+                  <img src="images/Jomila.jpg" alt="Portait of Jomila - a Rohingya citizen" />
+                  <p>Title Goes Here</p>
+                </div>
+              </b-col>
+            </b-row>
+          </b-col>
         </b-row>
       </b-container>
     </section>
@@ -61,22 +64,95 @@
 
 <script>
 // @ is an alias to /src
-import Flyout from "@/components/Flyout.vue";
-import AudioPlayer from "@/components/AudioPlayer.vue";
 
 export default {
   name: "home",
-  components: {
-    Flyout,
-    AudioPlayer
-  },
   data() {
     return {
-      flyout: {
-        title: "Mohammed",
-        subtitle: "The Mullah/Father/Husband"
-      }
+      title: "The Record Keeper",
+      name: "Jomila",
+      subtitle: "The Mother/Wife"
     };
   }
 };
 </script>
+<style lang="scss">
+body {
+  background-color: #282828 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.intro-background {
+  display: none;
+}
+
+.intro {
+  color: #fff;
+}
+
+.citizen {
+  height: 300px;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.citizen-elements {
+  height: 100%;
+  position: relative;
+}
+
+.citizen-elements img {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.citizen-elements p {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(to bottom, #bd9727, #bd9727);
+  background-size: 100px 2px;
+  background-position: 50% 25px;
+  background-repeat: no-repeat;
+  bottom: 0;
+  color: #fff;
+  margin: 0;
+  padding: 35px 30px 25px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    margin-bottom: 30px;
+    padding: 40px 0 0;
+  }
+  .intro-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .intro-background img {
+    height: 100%;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    -o-object-fit: cover;
+    object-fit: cover;
+    // position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+}
+</style>
