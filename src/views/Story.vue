@@ -2,7 +2,7 @@
   <div>
     <section class="story-intro">
       <figure class="story-intro-background">
-        <img src="images/hero-bg.jpg" alt="A Rohingya Village" />
+        <img src="images/bg-nogradient.jpg" alt="A Rohingya Village" />
       </figure>
       <b-container>
         <b-row>
@@ -10,8 +10,8 @@
             <b-row>
               <b-col md="10" offset-md="1" xl="8" offset-xl="2">
                 <figure class="story-featured-image">
-                  <!-- <div class="mobile-screen"></div> -->
-                  <img src="images/Jomila.jpg" alt="Portrait of Jomila, the Mother/Wife" />
+                  <div class="mobile-screen"></div>
+                  <img src="images/mothers-bg.jpg" alt="Portrait of Jomila, the Mother/Wife" />
                 </figure>
                 <div class="intro-text">
                   <p class="page-title">{{ title }}</p>
@@ -98,11 +98,23 @@
         </b-row>
       </div>
     </section>
-    <section class="content">
+    <section class="section-break">
+      <figure class="section-break-figure">
+        <img src="images/section-break-1.jpg" alt="A collage of drawings by Rohinya children." />
+      </figure>
       <div class="container">
-        <figure class="fullscreen-section-image">
-          <img src="images/section-bkg.jpg" alt="A group of Rohingya citizens wait in a line." />
-        </figure>
+        <b-row class="h-100">
+          <b-col cols="12" lg="6" offset-lg="3" class="my-auto">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in, cupiditate exercitationem expedita neque atque veniam consequatur quibusdam obcaecati. Adipisci veritatis sunt in fugiat perspiciatis quis a alias, placeat rem.</p>
+          </b-col>
+        </b-row>
+      </div>
+    </section>
+    <section class="content">
+      <figure class="fullscreen-section-image">
+        <img src="images/main-bg01-original.jpg" alt="A group of Rohingya citizens wait in a line." />
+      </figure>
+      <div class="container">
         <b-row>
           <b-col lg="10" offset-lg="1">
             <b-row>
@@ -171,47 +183,51 @@ export default {
 </script>
 <style lang="scss">
 body {
-  background-color: #282828 !important;
+  background-color: #0f0f0f !important;
   margin: 0 !important;
   padding: 0 !important;
 }
-
+.story-intro {
+  position: relative;
+}
 .story-intro-background {
   display: none;
 }
 .story-featured-image {
   left: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
+  width: 100%;
+  z-index: 0;
 
   .mobile-screen {
     background: rgba(0, 0, 0, 0.65);
     display: block;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     width: 100%;
     z-index: 1;
   }
 
   img {
-    width: 100vh;
+    width: 100%;
   }
 }
 .intro-text {
-  background-image: linear-gradient(
-      to bottom,
-      transparent,
-      rgba(0, 0, 0, 0.7) 50%
-    ),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   transparent,
+  //   rgba(0, 0, 0, 0.8) 50%
+  // );
   background-repeat: no-repeat;
-  background-size: 100% 100px, 100% 100%;
-  background-position: 0 0, 0 100px;
-  color: #fff;
-  margin: 360px -15px 0;
+  background-size: 100% 100%;
+  background-position: 0 0;
+  color: #d8d8d8;
+  margin: 200px -15px 0;
   padding: 90px 15px 50px;
   position: relative;
   text-align: left;
+  z-index: 1;
 }
 
 .name-group {
@@ -242,7 +258,7 @@ body {
 }
 
 .intro-snippet {
-  background: rgba(0, 0, 0, 0.7);
+  // background: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: left;
   font-size: 1.2rem;
@@ -251,8 +267,8 @@ body {
   position: relative;
 }
 .content {
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  // background: rgba(0, 0, 0, 0.8);
+  color: #d8d8d8;
   position: relative;
   text-align: left;
 }
@@ -260,14 +276,32 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
+  width: 100%;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0px 139px 40px -38px #000;
+    height: 130px;
+    width: 100%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 0px -139px 40px -38px #0f0f0f;
+    height: 130px;
+    width: 100%;
+  }
 }
 .fullscreen-section-image img {
-  height: 100%;
   left: 0;
-  min-width: 100vw;
-  object-fit: cover;
   top: 0;
-  width: 100%;
+  width: 1339px;
 }
 .content-left {
   padding-top: 100px;
@@ -282,7 +316,34 @@ body {
   }
 }
 
+.section-break {
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+
+  .container {
+    height: 100%;
+  }
+}
+
+.section-break-figure {
+  left: 0;
+  top: 0;
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+.section-break p {
+  color: #d8d8d8;
+}
+
 @media (min-width: 768px) {
+  body {
+    background-color: #282828 !important;
+  }
   .story-intro {
     margin-bottom: 100px;
     padding: 40px 0 0;
@@ -292,6 +353,16 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset 0px -139px 40px -38px rgba(40, 40, 40, 1);
+      height: 130px;
+      width: 100%;
+    }
   }
   .story-intro-background img {
     height: 100%;
@@ -303,6 +374,11 @@ body {
     // position: absolute;
     top: 0;
     width: 100%;
+    // mask-image: linear-gradient(
+    //   to bottom,
+    //   rgba(0, 0, 0, 1) 60%,
+    //   rgba(0, 0, 0, 0) 80%
+    // );
   }
   .story-featured-image {
     float: left;
@@ -336,10 +412,33 @@ body {
     background: none;
     margin-bottom: 50px;
   }
+
+  .fullscreen-section-image {
+    width: 100%;
+
+    &:before {
+      box-shadow: inset 0px 139px 40px -38px #282828;
+    }
+    &:after {
+      box-shadow: inset 0px -139px 40px -38px #282828;
+    }
+  }
+  .fullscreen-section-image img {
+    width: 100%;
+  }
+  .section-break {
+    background: none;
+    height: 620px;
+    margin-bottom: 60px;
+    overflow: hidden;
+  }
+  .section-break-figure {
+    position: absolute;
+  }
 }
 @media (min-width: 992px) {
   .story-intro {
-    margin-bottom: 200px;
+    height: 100vh;
   }
   .story-featured-image {
     max-width: 320px;
@@ -348,6 +447,12 @@ body {
     width: 400px;
     margin-top: -140px;
     margin-right: 140px;
+  }
+}
+@media (min-width: 1341px) {
+  .story-intro-background {
+    max-height: 824px;
+    overflow: hidden;
   }
 }
 </style>
