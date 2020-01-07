@@ -1,5 +1,8 @@
 module.exports = {
   plugins: {
-    autoprefixer: {}
+    autoprefixer: {},
+    "postcss-sorting": {
+      "properties-order": "alphabetical"
+    }
   }
 };
