@@ -1,6 +1,16 @@
 <template>
   <div>
-    <section class="story-intro">
+    <div id="skipnav"><a href="#content">Skip navigation</a></div>
+    <nav>
+      <ul>
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+        <li><a href="">Link 3</a></li>
+        <li><a href="">Link 4</a></li>
+        <li><a href="">Link 5</a></li>
+      </ul>
+    </nav>
+    <section class="story-intro" id="content" tabindex="-1">
       <figure class="story-intro-background">
         <img src="images/bg-nogradient.jpg" role="presentation" />
       </figure>
