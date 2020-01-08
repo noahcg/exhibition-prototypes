@@ -1,6 +1,7 @@
 <template>
   <div>
     <div id="skipnav"><a href="#content">Skip navigation</a></div>
+
     <nav>
       <ul>
         <li><a href="">Link 1</a></li>
@@ -43,284 +44,308 @@
         </b-row>
       </b-container>
     </section>
-    <section class="content">
-      <div class="container">
-        <b-row>
-          <b-col lg="10" offset-lg="1">
-            <b-row>
-              <b-col cols="12" md="5" class="content-left">
-                <figure>
-                  <img
-                    src="images/shirt.png"
-                    alt="Image of a shirt being shown by Jomila"
-                  />
-                  <figcaption>This is an image caption.</figcaption>
-                </figure>
-              </b-col>
-              <b-col cols="12" md="7" class="content-right">
-                <h1 class="section-title">The Record Keeper</h1>
-                <h2>Part 1</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <ul>
-                  <li>item</li>
-                  <li>item</li>
-                  <li>item</li>
-                  <li>item</li>
-                  <li>item</li>
-                </ul>
-                <ol>
-                  <li>ordered items</li>
-                  <li>ordered items</li>
-                  <li>ordered items</li>
-                  <li>ordered items</li>
-                  <li>ordered items</li>
-                </ol>
-                <a href="google.com">Text Link</a>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-              </b-col>
-            </b-row>
-          </b-col>
-        </b-row>
-      </div>
-    </section>
-    <section class="content">
-      <div class="container">
-        <b-row>
-          <b-col lg="10" offset-lg="1">
-            <b-row>
-              <b-col cols="12" md="5" class="content-left">
-                <figure>
-                  <img
-                    src="images/shirt.png"
-                    alt="Image of a shirt being shown by Jomila"
-                  />
-                  <figcaption>This is an image caption.</figcaption>
-                </figure>
-              </b-col>
-              <b-col cols="12" md="7" class="content-right">
-                <h2>Part 2</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-              </b-col>
-            </b-row>
-          </b-col>
-        </b-row>
-      </div>
-    </section>
-    <section class="content">
-      <div class="container">
-        <b-row>
-          <b-col lg="10" offset-lg="1">
-            <b-row>
-              <b-col cols="12" md="5" class="content-left">
-                <figure>
-                  <!-- <img src="images/shirt.png" alt="Image of a shirt being shown by Jomila" /> -->
-                  <!-- <figcaption>This is an image caption.</figcaption> -->
-                </figure>
-              </b-col>
-              <b-col cols="12" md="7" class="content-right">
-                <h2>Part 3</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-              </b-col>
-            </b-row>
-          </b-col>
-        </b-row>
-      </div>
-    </section>
-    <section class="section-break">
-      <figure class="section-break-figure">
-        <img
-          src="images/section-break-1.jpg"
-          alt="A collage of drawings by Rohinya children."
-        />
-      </figure>
-      <div class="container">
-        <b-row class="h-100">
-          <b-col cols="12" lg="6" offset-lg="3" class="my-auto">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-              in, cupiditate exercitationem expedita neque atque veniam
-              consequatur quibusdam obcaecati. Adipisci veritatis sunt in fugiat
-              perspiciatis quis a alias, placeat rem.
-            </p>
-          </b-col>
-        </b-row>
-      </div>
-    </section>
-    <section class="content">
-      <figure class="fullscreen-section-image">
-        <img
-          src="images/main-bg01-original.jpg"
-          alt="A group of Rohingya citizens wait in a line."
-        />
-      </figure>
-      <div class="container">
-        <b-row>
-          <b-col lg="10" offset-lg="1">
-            <b-row>
-              <b-col cols="12" md="5" class="content-left">
-                <figure>
-                  <img
-                    src="images/shirt.png"
-                    alt="Image of a shirt being shown by Jomila"
-                  />
-                  <figcaption>This is an image caption.</figcaption>
-                </figure>
-              </b-col>
-              <b-col cols="12" md="7" class="content-right">
-                <h2>Part 4</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-              </b-col>
-            </b-row>
-          </b-col>
-        </b-row>
-      </div>
-    </section>
-    <section class="content">
-      <div class="container">
-        <figure class="fullscreen-section-image">
-          <!-- <img src="images/section-bkg.jpg" alt="A group of Rohingya citizens wait in a line." /> -->
+    <progress value="0" ref="prog"></progress>
+    <article ref="content">
+      <section class="content">
+        <div class="container">
+          <b-row>
+            <b-col lg="10" offset-lg="1">
+              <b-row>
+                <b-col cols="12" md="5" class="content-left">
+                  <figure>
+                    <img
+                      src="images/shirt.png"
+                      alt="Image of a shirt being shown by Jomila"
+                    />
+                    <figcaption>This is an image caption.</figcaption>
+                  </figure>
+                </b-col>
+                <b-col cols="12" md="7" class="content-right">
+                  <h1 class="section-title">The Record Keeper</h1>
+                  <h2>Part 1</h2>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <ul>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                  </ul>
+                  <ol>
+                    <li>ordered items</li>
+                    <li>ordered items</li>
+                    <li>ordered items</li>
+                    <li>ordered items</li>
+                    <li>ordered items</li>
+                  </ol>
+                  <a href="google.com">Text Link</a>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <b-row>
+            <b-col lg="10" offset-lg="1">
+              <b-row>
+                <b-col cols="12" md="5" class="content-left">
+                  <figure>
+                    <img
+                      src="images/shirt.png"
+                      alt="Image of a shirt being shown by Jomila"
+                    />
+                    <figcaption>This is an image caption.</figcaption>
+                  </figure>
+                </b-col>
+                <b-col cols="12" md="7" class="content-right">
+                  <h2>Part 2</h2>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <b-row>
+            <b-col lg="10" offset-lg="1">
+              <b-row>
+                <b-col cols="12" md="5" class="content-left">
+                  <figure>
+                    <!-- <img src="images/shirt.png" alt="Image of a shirt being shown by Jomila" /> -->
+                    <!-- <figcaption>This is an image caption.</figcaption> -->
+                  </figure>
+                </b-col>
+                <b-col cols="12" md="7" class="content-right">
+                  <h2>Part 3</h2>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </div>
+      </section>
+      <section class="section-break">
+        <figure class="section-break-figure">
+          <img
+            src="images/section-break-1.jpg"
+            alt="A collage of drawings by Rohinya children."
+          />
         </figure>
-        <b-row>
-          <b-col lg="10" offset-lg="1">
-            <b-row>
-              <b-col cols="12" md="5" class="content-left">
-                <figure>
-                  <img
-                    src="images/shirt.png"
-                    alt="Image of a shirt being shown by Jomila"
-                  />
-                  <figcaption>This is an image caption.</figcaption>
-                </figure>
-              </b-col>
-              <b-col cols="12" md="7" class="content-right">
-                <h2>Part 5</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
-                  magni? Ex voluptates rem qui exercitationem aperiam similique
-                  voluptatibus explicabo. Quasi, recusandae. Tempore, id?
-                </p>
-              </b-col>
-            </b-row>
-          </b-col>
-        </b-row>
-      </div>
-    </section>
+        <div class="container">
+          <b-row class="h-100">
+            <b-col cols="12" lg="6" offset-lg="3" class="my-auto">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+                in, cupiditate exercitationem expedita neque atque veniam
+                consequatur quibusdam obcaecati. Adipisci veritatis sunt in
+                fugiat perspiciatis quis a alias, placeat rem.
+              </p>
+            </b-col>
+          </b-row>
+        </div>
+      </section>
+      <section class="content">
+        <figure class="fullscreen-section-image">
+          <img
+            src="images/main-bg01-original.jpg"
+            alt="A group of Rohingya citizens wait in a line."
+          />
+        </figure>
+        <div class="container">
+          <b-row>
+            <b-col lg="10" offset-lg="1">
+              <b-row>
+                <b-col cols="12" md="5" class="content-left">
+                  <figure>
+                    <img
+                      src="images/shirt.png"
+                      alt="Image of a shirt being shown by Jomila"
+                    />
+                    <figcaption>This is an image caption.</figcaption>
+                  </figure>
+                </b-col>
+                <b-col cols="12" md="7" class="content-right">
+                  <h2>Part 4</h2>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </div>
+      </section>
+      <section class="content">
+        <div class="container">
+          <figure class="fullscreen-section-image">
+            <!-- <img src="images/section-bkg.jpg" alt="A group of Rohingya citizens wait in a line." /> -->
+          </figure>
+          <b-row>
+            <b-col lg="10" offset-lg="1">
+              <b-row>
+                <b-col cols="12" md="5" class="content-left">
+                  <figure>
+                    <img
+                      src="images/shirt.png"
+                      alt="Image of a shirt being shown by Jomila"
+                    />
+                    <figcaption>This is an image caption.</figcaption>
+                  </figure>
+                </b-col>
+                <b-col cols="12" md="7" class="content-right">
+                  <h2>Part 5</h2>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus quaerat eius aperiam deserunt quisquam vitae sunt
+                    magni? Ex voluptates rem qui exercitationem aperiam
+                    similique voluptatibus explicabo. Quasi, recusandae.
+                    Tempore, id?
+                  </p>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </div>
+      </section>
+    </article>
   </div>
 </template>
 
@@ -332,8 +357,36 @@ export default {
     return {
       title: "The Record Keeper",
       name: "Jomila",
-      subtitle: "The Mother/Wife"
+      subtitle: "The Mother/Wife",
+      winHeight: null,
+      docHeight: null,
+      max: 0
     };
+  },
+  methods: {
+    getHeight: function() {
+      this.winHeight = window.innerHeight;
+      this.docHeight = this.$refs.content.clientHeight;
+      this.max = this.docHeight - this.winHeight;
+
+      return this.max;
+    },
+    setHeight: function() {
+      this.$refs.prog.setAttribute("max", this.getHeight());
+    },
+    updateProgressValue: function() {
+      let value = window.pageYOffset;
+      let other = value - this.$refs.content.offsetTop;
+
+      if (value >= this.$refs.content.offsetTop) {
+        this.$refs.prog.setAttribute("value", other);
+      }
+    }
+  },
+  mounted() {
+    this.setHeight();
+
+    window.addEventListener("scroll", this.updateProgressValue);
   }
 };
 </script>
@@ -343,6 +396,45 @@ body {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+progress {
+  /* Positioning */
+  position: sticky;
+  left: 0;
+  top: 0;
+
+  /* Dimensions */
+  width: 100%;
+  height: 5px;
+
+  /* Reset the appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+
+  /* Progress bar container for Firefox/IE10+ */
+  background-color: transparent;
+
+  /* Progress bar value for IE10+ */
+  color: red;
+  z-index: 999;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: red;
+}
+
+progress::-moz-progress-bar {
+  background-color: red;
+}
+
 .story-intro {
   position: relative;
 }
