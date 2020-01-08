@@ -375,11 +375,10 @@ export default {
       this.$refs.prog.setAttribute("max", this.getHeight());
     },
     updateProgressValue: function() {
-      let value = window.pageYOffset;
-      let other = value - this.$refs.content.offsetTop;
+      let scrollPos = window.pageYOffset - this.$refs.content.offsetTop;
 
-      if (value >= this.$refs.content.offsetTop) {
-        this.$refs.prog.setAttribute("value", other);
+      if (window.pageYOffset >= this.$refs.content.offsetTop) {
+        this.$refs.prog.setAttribute("value", scrollPos);
       }
     }
   },
