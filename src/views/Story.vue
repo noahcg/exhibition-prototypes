@@ -44,7 +44,9 @@
         </b-row>
       </b-container>
     </section>
-    <progress value="0" ref="prog"></progress>
+    <div class="progress-bar-container">
+      <progress value="0" ref="prog"></progress>
+    </div>
     <article ref="content">
       <section class="content">
         <div class="container">
@@ -331,6 +333,7 @@
                     magni? Ex voluptates rem qui exercitationem aperiam
                     similique voluptatibus explicabo. Quasi, recusandae.
                     Tempore, id?
+                    <a href="">Text Link</a>
                   </p>
                   <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -357,19 +360,14 @@ export default {
     return {
       title: "The Record Keeper",
       name: "Jomila",
-      subtitle: "The Mother/Wife",
-      winHeight: null,
-      docHeight: null,
-      max: 0
+      subtitle: "The Mother/Wife"
     };
   },
   methods: {
     getHeight: function() {
-      this.winHeight = window.innerHeight;
-      this.docHeight = this.$refs.content.clientHeight;
-      this.max = this.docHeight - this.winHeight;
+      const max = this.$refs.content.clientHeight - window.innerHeight;
 
-      return this.max;
+      return max;
     },
     setHeight: function() {
       this.$refs.prog.setAttribute("max", this.getHeight());
@@ -379,6 +377,9 @@ export default {
 
       if (window.pageYOffset >= this.$refs.content.offsetTop) {
         this.$refs.prog.setAttribute("value", scrollPos);
+        this.$refs.prog.parentElement.classList.add("fadein");
+      } else {
+        this.$refs.prog.parentElement.classList.remove("fadein");
       }
     }
   },
@@ -396,11 +397,26 @@ body {
   padding: 0 !important;
 }
 
-progress {
-  /* Positioning */
+.progress-bar-container {
+  background-color: rgba(255, 255, 255, 0.6);
   position: sticky;
   left: 0;
   top: 0;
+  height: 50px;
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.fadein {
+    opacity: 1;
+  }
+}
+
+progress {
+  /* Positioning */
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
   /* Dimensions */
   width: 100%;
