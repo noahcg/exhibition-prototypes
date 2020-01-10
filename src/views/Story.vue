@@ -44,8 +44,8 @@
         </b-row>
       </b-container>
     </section>
-    <div class="progress-bar-container">
-      <progress value="0" ref="prog"></progress>
+    <div :class="['progress-bar-container', { fadein: showProgBar }]">
+      <progress :value="progBarValue" :max="progBarMax" ref="prog"></progress>
     </div>
     <article ref="content">
       <section class="content">
@@ -360,33 +360,36 @@ export default {
     return {
       title: "The Record Keeper",
       name: "Jomila",
-      subtitle: "The Mother/Wife"
+      subtitle: "The Mother/Wife",
+      showProgBar: false,
+      progBarValue: 0,
+      clientHeight: null
     };
   },
   methods: {
-    getHeight: function() {
-      const max = this.$refs.content.clientHeight - window.innerHeight;
-
-      return max;
-    },
-    setHeight: function() {
-      this.$refs.prog.setAttribute("max", this.getHeight());
-    },
     updateProgressValue: function() {
       let scrollPos = window.pageYOffset - this.$refs.content.offsetTop;
 
       if (window.pageYOffset >= this.$refs.content.offsetTop) {
-        this.$refs.prog.setAttribute("value", scrollPos);
-        this.$refs.prog.parentElement.classList.add("fadein");
+        this.progBarValue = scrollPos;
+        this.showProgBar = true;
       } else {
-        this.$refs.prog.parentElement.classList.remove("fadein");
+        this.showProgBar = false;
       }
     }
   },
   mounted() {
-    this.setHeight();
-
     window.addEventListener("scroll", this.updateProgressValue);
+    this.clientHeight = this.$refs.content.clientHeight;
+  },
+  computed: {
+    progBarMax() {
+      try {
+        return this.clientHeight - window.innerHeight;
+      } catch (exc) {
+        return 100;
+      }
+    }
   }
 };
 </script>
