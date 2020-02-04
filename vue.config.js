@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: "/",
+  publicPath: "/rohingya/image-panel",
   css: {
     loaderOptions: {
       scss: {

@@ -5,8 +5,10 @@ import store from "./store";
 import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import VueAgile from "vue-agile";
 
 Vue.use(BootstrapVue);
+Vue.use(VueAgile);
 
 Vue.config.productionTip = false;
 
