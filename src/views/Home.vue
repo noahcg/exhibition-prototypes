@@ -50,6 +50,30 @@
         </b-row>
       </b-container>
     </section>
+    <section class="panel">
+      <b-container>
+        <b-row class="first-row flex-row-reverse">
+          <b-col lg="5" offset-lg="1" class="first-column">
+            <figure>
+              <img src="https://placeimg.com/800/540/nature" alt="" srcset="" />
+            </figure>
+          </b-col>
+        </b-row>
+        <b-row class="second-row flex-row-reverse">
+          <b-col lg="6" offset-lg="5" class="second-column">
+            <div class="content-container">
+              <h2 class="text-left">Sample Title</h2>
+              <p class="text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
+                consequuntur! Non, cupiditate reprehenderit laboriosam sunt
+                impedit hic autem ipsam architecto voluptates voluptate! Alias
+                incidunt blanditiis beatae quia officia. Ex, explicabo!
+              </p>
+            </div>
+          </b-col>
+        </b-row>
+      </b-container>
+    </section>
   </div>
 </template>
 
@@ -124,6 +148,10 @@ export default {
   right: 0;
 }
 
+section {
+  margin-bottom: 30px;
+}
+
 @media (min-width: 992px) {
   .first-row {
     top: 80px;
@@ -138,6 +166,18 @@ export default {
   .second-row {
     .second-column .content-container {
       padding: 50px 50px 50px 100px;
+    }
+  }
+  .flex-row-reverse {
+    .offset-lg-1 {
+      margin-right: 8.333333%;
+    }
+    .offset-lg-5 {
+      margin-right: 41.666667%;
+
+      .content-container {
+        padding: 50px 100px 50px 50px;
+      }
     }
   }
 }
