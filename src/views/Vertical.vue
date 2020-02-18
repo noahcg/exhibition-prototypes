@@ -1,42 +1,24 @@
 <template>
   <div>
-    <section class="panel">
+    <h1 class="text-white">Vertical</h1>
+    <section class="panel vertical-image">
+      <h2 class="text-white">Panel 5 - A</h2>
       <b-container>
         <b-row class="first-row">
-          <b-col lg="5" offset-lg="1" class="first-column">
-            <agile>
-              <div class="slide">
-                <figure>
-                  <img
-                    src="https://placeimg.com/800/540/animals"
-                    alt=""
-                    srcset=""
-                  />
-                </figure>
-              </div>
-              <div class="slide">
-                <figure>
-                  <img
-                    src="https://placeimg.com/800/540/arch"
-                    alt=""
-                    srcset=""
-                  />
-                </figure>
-              </div>
-              <div class="slide">
-                <figure>
-                  <img
-                    src="https://placeimg.com/800/540/nature"
-                    alt=""
-                    srcset=""
-                  />
-                </figure>
-              </div>
-            </agile>
+          <b-col md="4" offset-md="1" class="first-column">
+            <div class="figure-container">
+              <figure>
+                <img
+                  src="https://placeimg.com/540/800/nature"
+                  alt=""
+                  srcset=""
+                />
+              </figure>
+            </div>
           </b-col>
         </b-row>
         <b-row class="second-row">
-          <b-col lg="6" offset-lg="5" class="second-column">
+          <b-col md="7" offset-md="4" class="second-column">
             <div class="content-container">
               <h2 class="text-left">Sample Title</h2>
               <p class="text-left">
@@ -50,17 +32,24 @@
         </b-row>
       </b-container>
     </section>
-    <section class="panel">
+    <section class="panel vertical-image">
+      <h2 class="text-white">Panel 5 - B</h2>
       <b-container>
         <b-row class="first-row flex-row-reverse">
-          <b-col lg="5" offset-lg="1" class="first-column">
-            <figure>
-              <img src="https://placeimg.com/800/540/nature" alt="" srcset="" />
-            </figure>
+          <b-col md="4" offset-md="1" class="first-column">
+            <div class="figure-container">
+              <figure>
+                <img
+                  src="https://placeimg.com/540/800/nature"
+                  alt=""
+                  srcset=""
+                />
+              </figure>
+            </div>
           </b-col>
         </b-row>
         <b-row class="second-row flex-row-reverse">
-          <b-col lg="6" offset-lg="5" class="second-column">
+          <b-col md="7" offset-md="4" class="second-column">
             <div class="content-container">
               <h2 class="text-left">Sample Title</h2>
               <p class="text-left">
@@ -79,15 +68,11 @@
 
 <script>
 // @ is an alias to /src
-import { VueAgile } from "vue-agile";
 export default {
-  name: "home",
-  components: {
-    agile: VueAgile
-  }
+  name: "home"
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   position: relative;
 }
@@ -95,12 +80,18 @@ export default {
   position: relative;
   z-index: 2;
   .first-column {
+    .figure-container {
+      background: #ccc;
+      padding: 30px 30px 0;
+    }
     img {
       height: 100%;
       width: 100%;
     }
     figure {
       margin: 0;
+      max-width: 270px;
+      width: 75%;
     }
   }
 }
@@ -152,31 +143,43 @@ section {
   margin-bottom: 30px;
 }
 
-@media (min-width: 992px) {
-  .first-row {
-    top: 80px;
+@media (min-width: 768px) {
+  .vertical-image {
+    .first-row {
+      top: 120px;
 
-    .first-column figure {
-      max-height: 324px;
-      max-width: 540px;
-      overflow: hidden;
-    }
-  }
+      .first-column {
+        .figure-container {
+          background: none;
+          padding: 0;
+        }
+        figure {
+          max-height: 500px;
+          max-width: 324px;
+          overflow: hidden;
+          width: auto;
+        }
+      }
 
-  .second-row {
-    .second-column .content-container {
-      padding: 50px 50px 50px 100px;
+      &.flex-row-reverse {
+        .offset-md-1 {
+          margin-right: 8.333333%;
+        }
+      }
     }
-  }
-  .flex-row-reverse {
-    .offset-lg-1 {
-      margin-right: 8.333333%;
-    }
-    .offset-lg-5 {
-      margin-right: 41.666667%;
 
-      .content-container {
-        padding: 50px 100px 50px 50px;
+    .second-row {
+      &.flex-row-reverse {
+        .offset-md-4.second-column {
+          margin-right: 33.333333%;
+
+          .content-container {
+            padding: 50px 100px 50px 50px;
+          }
+        }
+      }
+      .second-column .content-container {
+        padding: 50px 50px 50px 100px;
       }
     }
   }

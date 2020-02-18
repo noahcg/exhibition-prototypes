@@ -1,14 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Horizontal from "../views/Horizontal.vue";
+import Vertical from "../views/Vertical.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: Home
+    name: "horizontal",
+    component: Horizontal
+  },
+  {
+    path: "/vertical",
+    name: "vertical",
+    component: Vertical
   }
 ];
 
