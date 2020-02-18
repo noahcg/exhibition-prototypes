@@ -1,20 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Horizontal from "../views/Horizontal.vue";
-import Vertical from "../views/Vertical.vue";
+import Panel1 from "../views/Panel1.vue";
+import Panel2 from "../views/Panel2.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "horizontal",
-    component: Horizontal
+    name: "panel1",
+    component: Panel1
   },
   {
-    path: "/vertical",
-    name: "vertical",
-    component: Vertical
+    path: "/panel2",
+    name: "panel2",
+    component: Panel2
   }
 ];
 
