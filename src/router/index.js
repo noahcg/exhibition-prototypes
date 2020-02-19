@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Panel1 from "../views/Panel1.vue";
-import Panel2 from "../views/Panel2.vue";
+import Panel3 from "../views/Panel3.vue";
+import Panel5 from "../views/Panel5.vue";
 
 Vue.use(VueRouter);
 
@@ -12,9 +13,14 @@ const routes = [
     component: Panel1
   },
   {
-    path: "/panel2",
-    name: "panel2",
-    component: Panel2
+    path: "/panel3",
+    name: "panel3",
+    component: Panel3
+  },
+  {
+    path: "/panel5",
+    name: "panel5",
+    component: Panel5
   }
 ];
 
