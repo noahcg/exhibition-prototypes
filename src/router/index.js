@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Panel1 from "../views/Panel1.vue";
 import Panel2Image from "../views/Panel2-Image.vue";
 import Panel2Video from "../views/Panel2-Video.vue";
+import Panel2YouTube from "../views/Panel2-YouTube.vue";
 import Panel3 from "../views/Panel3.vue";
 import Panel5 from "../views/Panel5.vue";
 
@@ -23,6 +24,11 @@ const routes = [
     path: "/panel2-video",
     name: "panel2-video",
     component: Panel2Video
+  },
+  {
+    path: "/panel2-youtube",
+    name: "panel2-youtube",
+    component: Panel2YouTube
   },
   {
     path: "/panel3",

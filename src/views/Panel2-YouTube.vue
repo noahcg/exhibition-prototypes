@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-white">Panel 2 - Video</h1>
+    <h1 class="text-white">Panel 2 - YouTube</h1>
     <section class="video-panel">
       <div class="col">
         <b-container>
@@ -24,20 +24,14 @@
               </p>
             </b-col>
             <b-col md="12" lg="12" xl="12">
-              <video ref="videoPlayer" controls>
-                <source
-                  src="videos/upc-tobymanley.theora.ogg"
-                  type="video/ogg"
-                />
-                <source src="videos/upc-tobymanley.mp4" type="video/mp4" />
-                <track
-                  label="English subtitles"
-                  kind="subtitles"
-                  srclang="en"
-                  src="videos/upc-video-subtitles-en.vtt"
-                  default
-                />
-              </video>
+              <div class="embed-responsive embed-responsive-16by9">
+                <youtube
+                  video-id="kJTisX6jit0"
+                  ref="videoPlayer"
+                  @ready="ready"
+                  :player-vars="{ modestbranding: 1, rel: 0 }"
+                ></youtube>
+              </div>
             </b-col>
           </b-row>
           <b-row class="align-items-center content-row" ref="contentRow">
@@ -70,18 +64,6 @@
               >
                 Play Video
               </button>
-              <!-- <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Praesentium, vero repudiandae iste, nihil corrupti at, totam
-                impedit eos cum consectetur soluta molestiae tempora sunt
-                officiis? Expedita autem dolorem doloribus obcaecati.
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Praesentium, vero repudiandae iste, nihil corrupti at, totam
-                impedit eos cum consectetur soluta molestiae tempora sunt
-                officiis? Expedita autem dolorem doloribus obcaecati.
-              </p> -->
               <hr />
               <p>Caption, credit, source</p>
             </b-col>
@@ -95,20 +77,27 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: "panel2-video",
+  name: "panel2-youtube",
+  data() {
+    return {
+      showVideo: false
+    };
+  },
   methods: {
+    ready: function(event) {
+      this.player = event.target;
+    },
     playVideo: function() {
       this.$refs.contentRow.classList.add("hidden");
       this.$refs.imageRow.classList.add("hidden");
       this.$refs.videoRow.classList.remove("hidden");
-      this.$refs.videoPlayer.play();
-      this.$refs.videoPlayer.focus();
+      this.player.playVideo();
     },
     closeVideo: function() {
       this.$refs.contentRow.classList.remove("hidden");
       this.$refs.imageRow.classList.remove("hidden");
       this.$refs.videoRow.classList.add("hidden");
-      this.$refs.videoPlayer.pause();
+      this.player.stopVideo();
     }
   }
 };
@@ -160,6 +149,9 @@ hr {
     display: none;
   }
   video {
+    width: 100%;
+  }
+  iframe {
     width: 100%;
   }
 }
