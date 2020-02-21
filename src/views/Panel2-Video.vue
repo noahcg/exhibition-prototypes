@@ -10,8 +10,9 @@
               <img src="https://placeimg.com/600/337/arch" alt="" srcset="" />
             </b-col>
           </b-row>
-          <b-row class="align-items-center video-row hidden" ref="videoRow">
-            <b-col class="text-white" md="12" lg="12" xl="12">
+          <b-row class="video-row hidden" ref="videoRow">
+            <b-col class="text-white align-self-end" md="12" lg="12" xl="12">
+              <h2>Who Are The Rohingya?</h2>
               <p>
                 <button
                   @click="this.closeVideo"
@@ -40,7 +41,7 @@
               offset-xl="2"
               class="text-left text-white"
             >
-              <h2 class="text-center">Title</h2>
+              <h2 class="text-center">Who Are The Rohingya?</h2>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Praesentium, vero repudiandae iste, nihil corrupti at, totam
@@ -92,6 +93,7 @@ export default {
       this.$refs.imageRow.classList.add("hidden");
       this.$refs.videoRow.classList.remove("hidden");
       this.$refs.videoPlayer.play();
+      this.$refs.videoPlayer.focus();
     },
     closeVideo: function() {
       this.$refs.contentRow.classList.remove("hidden");
@@ -135,23 +137,22 @@ hr {
     position: relative;
   }
   .content-row {
-    min-height: 20rem;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .video-cta {
   display: none;
 }
-.close-button {
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 3rem;
-  float: right;
-  line-height: 1;
-  padding: 0;
+.video-row {
+  h2,
+  p,
+  .close-button {
+    display: none;
+  }
+  video {
+    width: 100%;
+  }
 }
 @media (min-width: 576px) {
   .image-row {
@@ -179,16 +180,37 @@ hr {
     width: 100%;
     z-index: 1;
 
-    video {
-      width: 100%;
-    }
-
     &.hidden {
       visibility: hidden;
+    }
+
+    h2 {
+      display: block;
+      float: left;
+      margin: 0;
+    }
+
+    p {
+      display: block;
+      float: right;
+      margin: 0;
+    }
+
+    .close-button {
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      display: inline;
+      font-size: 3rem;
+      line-height: 1;
+      padding: 0;
     }
   }
   .video-panel .content-row {
     min-height: 405px;
+    padding-bottom: 50px;
+    padding-top: 50px;
     position: relative;
     z-index: 3;
 
