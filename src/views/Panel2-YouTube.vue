@@ -4,13 +4,13 @@
     <section class="video-panel">
       <div class="col">
         <b-container>
-          <b-row class="image-row" ref="imageRow">
+          <b-row class="image-row" ref="imageRow" v-if="showContent">
             <b-col>
               <div class="image-mask"></div>
               <img src="https://placeimg.com/600/337/arch" alt="" srcset="" />
             </b-col>
           </b-row>
-          <b-row class="video-row hidden" ref="videoRow">
+          <b-row class="video-row" ref="videoRow" v-show="showVideo">
             <b-col class="text-white align-self-end" md="12" lg="12" xl="12">
               <h2>Who Are The Rohingya?</h2>
               <p>
@@ -34,7 +34,11 @@
               </div>
             </b-col>
           </b-row>
-          <b-row class="align-items-center content-row" ref="contentRow">
+          <b-row
+            class="align-items-center content-row"
+            ref="contentRow"
+            v-show="showContent"
+          >
             <b-col
               sm="10"
               offset-sm="1"
@@ -80,23 +84,29 @@ export default {
   name: "panel2-youtube",
   data() {
     return {
-      showVideo: false
+      showVideo: false,
+      showContent: true
     };
+  },
+  created() {
+    if (window.innerWidth < 576) {
+      this.showVideo = true;
+    } else {
+      this.showVideo = false;
+    }
   },
   methods: {
     ready: function(event) {
       this.player = event.target;
     },
     playVideo: function() {
-      this.$refs.contentRow.classList.add("hidden");
-      this.$refs.imageRow.classList.add("hidden");
-      this.$refs.videoRow.classList.remove("hidden");
+      this.showVideo = true;
+      this.showContent = false;
       this.player.playVideo();
     },
     closeVideo: function() {
-      this.$refs.contentRow.classList.remove("hidden");
-      this.$refs.imageRow.classList.remove("hidden");
-      this.$refs.videoRow.classList.add("hidden");
+      this.showVideo = false;
+      this.showContent = true;
       this.player.stopVideo();
     }
   }
@@ -165,25 +175,12 @@ hr {
     width: 100%;
     z-index: 2;
 
-    &.hidden {
-      visibility: hidden;
-    }
-
     img {
       height: 100%;
     }
   }
   .video-row {
-    height: 100%;
-    left: 15px;
-    position: absolute;
-    top: 0;
-    width: 100%;
     z-index: 1;
-
-    &.hidden {
-      visibility: hidden;
-    }
 
     h2 {
       display: block;
@@ -214,10 +211,6 @@ hr {
     padding-top: 50px;
     position: relative;
     z-index: 3;
-
-    &.hidden {
-      visibility: hidden;
-    }
   }
   .video-cta {
     display: block;
