@@ -1,50 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Panel1 from "../views/Panel1.vue";
-import Panel2Image from "../views/Panel2-Image.vue";
-import Panel2Video from "../views/Panel2-Video.vue";
-import Panel2YouTube from "../views/Panel2-YouTube.vue";
-import Panel3 from "../views/Panel3.vue";
-import Panel4 from "../views/Panel4.vue";
-import Panel5 from "../views/Panel5.vue";
+import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "panel1",
-    component: Panel1
-  },
-  {
-    path: "/panel2-image",
-    name: "panel2-image",
-    component: Panel2Image
-  },
-  {
-    path: "/panel2-video",
-    name: "panel2-video",
-    component: Panel2Video
-  },
-  {
-    path: "/panel2-youtube",
-    name: "panel2-youtube",
-    component: Panel2YouTube
-  },
-  {
-    path: "/panel3",
-    name: "panel3",
-    component: Panel3
-  },
-  {
-    path: "/panel4",
-    name: "panel4",
-    component: Panel4
-  },
-  {
-    path: "/panel5",
-    name: "panel5",
-    component: Panel5
+    name: "home",
+    component: Home
   }
 ];
 
